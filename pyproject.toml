@@ -26,4 +26,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-bountyhunter = "bountyhunter.cli.main:main"
+bh = "bountyhunter.cli.main:cli"
