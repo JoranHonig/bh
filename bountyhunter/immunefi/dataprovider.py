@@ -14,11 +14,24 @@ class ImmunefiDataProvider:
         return program
 
     def get_immunefi_programs(self):
-        url = "https://immunefi.com/_next/data/eDW5IfKuoHBKtCwL_1Nrf/bug-bounty.json"
-        response = get(url)
-        data: Dict[str, Any] = loads(response.text)
+        main_page = get('https://immunefi.com/bug-bounty/')
+        # data_links = findall(r"https://immunefi.com/_next/data/.*/bug-bounty.json", main_page.content.decode())
+        # data_links = list(set(data_links))
+        # if len(data_links) != 1:
+        #     return []
+        #
+        # url = data_links[0]
+        # response = get(url)
+        # data: Dict[str, Any] = loads(response.text)
 
-        programs = data.get("pageProps", {}).get("bounties", [])
+        data_match = findall(r"<script id=\"__NEXT_DATA__\" type=\"application/json\">(.*)</script>", main_page.text)
+
+        if not data_match:
+            return
+
+        data: Dict[str, Any] = loads(data_match[0])
+
+        programs = data.get("props", {}).get("pageProps", {}).get("bounties", [])
         programs = [self._clean_immunefi_program(program) for program in programs]
 
         return programs

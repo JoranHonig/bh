@@ -15,6 +15,8 @@ beautifulsoup4 = "^4.12.3"
 requests = "^2.31.0"
 requests-html = "^0.10.0"
 lxml-html-clean = "^0.1.0"
+tqdm = "^4.66.2"
+pygit2 = "^1.14.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.3.0"

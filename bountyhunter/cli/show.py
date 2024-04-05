@@ -34,7 +34,7 @@ def show(name):
     console = Console()
 
     # title
-    console.print(f"[bold]{data.get('bounty', {}).get("project")}[/bold]")
+    console.print(f"[bold]{data.get('bounty', {}).get('project')}[/bold]")
 
     # metadata in grey italics
     console.print(f"[italic][grey]launch: {launch_date}, updated on {updated_date}[/grey][/italic]")
