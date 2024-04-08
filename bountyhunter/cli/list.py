@@ -4,7 +4,6 @@ from rich.table import Table
 
 from bountyhunter.immunefi.dataprovider import ImmunefiDataProvider
 
-
 @command(help="List bug bounty programmes")
 def list():
     immunefi_data_provider = ImmunefiDataProvider()

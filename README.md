@@ -20,3 +20,9 @@ $ bh show <bounty_id>
 # sync github repositories for all bounty programs
 $ bh sync 
 ```
+
+## Supported Platforms
+
+Currently only one platform is supported: immunefi
+
+There will be more in the future!
