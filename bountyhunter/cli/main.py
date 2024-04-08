@@ -14,7 +14,6 @@ def cli():
 
 
 cli.add_command(sync)
-cli.add_command(search)
 cli.add_command(list)
 cli.add_command(show)
 
