@@ -55,7 +55,9 @@ def list(limit, show_high_reward, only_kyc):
         maximum_reward = program.get("maximum_reward")
         human_readable_max_reward = f"[green]${maximum_reward:,}[/green]"
 
-        table.add_row(program.get("project"), human_readable_max_reward, kycrequired)
+        # table.add_row(program.get("project"), human_readable_max_reward, kycrequired)
+        table.add_row(program.get("project"), human_readable_max_reward)
+                                  
         count += 1
 
     console.print(table)
