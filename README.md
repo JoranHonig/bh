@@ -1,4 +1,8 @@
 # Bounty Hunter 
+
+> [!warning]
+> This lib is wip use at your own peril!
+
 A cli to help you navigate bounty programs.
 
 
